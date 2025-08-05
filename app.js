@@ -32,3 +32,15 @@ function largestInArray(arr){
 
 }
 console.log(largestInArray([1,2,14,-15,0]))
+
+function smallestInArray(arr){
+    let temp = Infinity;
+    for(let i=0; i<arr.length; i++){
+        if(temp > arr[i]){
+            temp =arr[i];
+        }
+    }
+    return temp
+
+}
+console.log(smallestInArray([1,2,-14,-15,0]))
