@@ -20,3 +20,15 @@ function negativeNumberCount(arr){
     return count
 }
 console.log(negativeNumberCount([1,-1,2,3,0,-89, -3]))
+
+function largestInArray(arr){
+    let temp = arr[0];
+    for(let i=0; i<arr.length; i++){
+        if(temp < arr[i]){
+            temp =arr[i];
+        }
+    }
+    return temp
+
+}
+console.log(largestInArray([1,2,14,-15,0]))
