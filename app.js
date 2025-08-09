@@ -44,3 +44,20 @@ function smallestInArray(arr){
 
 }
 console.log(smallestInArray([1,2,-14,-15,0]))
+
+function findSecondlargest(arr){
+    let largest = -Infinity;
+    let secondlargest = -Infinity;
+    for(let i=0; i< arr.length; i++){
+        if(arr[i]> largest){
+            secondlargest =largest;
+            largest = arr[i];
+
+        }
+        else if (arr[i] > secondlargest ){
+            secondlargest = arr[i]
+        }
+    }
+    return secondlargest
+}
+console.log(findSecondlargest([-1,-2,-14,-15,-1]), "second largest")
