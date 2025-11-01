@@ -107,3 +107,51 @@ function starpattern3(n){
     }
 }
 starpattern3(5);
+
+function starpattern4(n){
+    console.log("Break")
+    let row,val =0;
+    for (let i=0; i< n ; i++){
+        row= "";
+        for (let j=n-1-i; j > -1 ; j--){
+            row = row + (n-j -i)
+        }
+        console.log(row)
+
+    }
+}
+starpattern4(5);
+
+function starpattern5(n){
+    console.log("Break")
+    let row,val =0;
+    for (let i=0; i< n ; i++){
+        row= "";
+        for (let j=0; j < n-i ; j++){
+            row = row + (j+1)
+        }
+        console.log(row)
+
+    }
+}
+starpattern5(5);
+
+function starpattern6(n){
+    console.log("Break")
+    let row,val =0;
+    for (let i=0; i< n ; i++){
+        row= "";
+        for (let j=0; j < n ; j++){
+            if ((n-i-1) <= j) {
+                row = row + "*"
+            }
+            else{
+                row = row + " "
+            }
+
+        }
+        console.log(row)
+
+    }
+}
+starpattern6(6);
