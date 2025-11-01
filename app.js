@@ -146,7 +146,7 @@ function starpattern6(n){
                 row = row + "*"
             }
             else{
-                row = row + " "
+                row = row + "1"
             }
 
         }
@@ -155,3 +155,54 @@ function starpattern6(n){
     }
 }
 starpattern6(6);
+
+function starpattern7(n){
+    console.log("Break")
+    let row,val =0;
+    for (let i=0; i< n ; i++){
+        row= "";
+        for (let j=0; j < n-(i+1) ; j++){
+            row= row + "."
+        }
+
+        for (let j=0; j < 2*i+ 1 ; j++){
+            row= row + "*"
+        }
+        for (let j=0; j < n-(i+1) ; j++){
+            row= row + "."
+        }
+
+        console.log(row)
+
+    }
+}
+starpattern7(6);
+
+function starpattern8(n){
+    let row,val =0;
+    for (let i=0; i< n ; i++){
+        row= "";
+        val =0;
+        for (let j=0; j< i+1 ; j++){
+            val = j+1;
+            row = row + val%2
+        }
+        console.log(row)
+
+    }
+}
+starpattern8(6);
+function starpattern9(n){
+    let row,val =0;
+    let toggle =0;
+    for (let i=0; i< n ; i++){
+        row= "";
+        for (let j=0; j< i+1 ; j++){
+            row = row + toggle;
+            toggle= !toggle ? 1 : 0;
+        }
+        console.log(row)
+
+    }
+}
+starpattern9(6);
