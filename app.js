@@ -206,3 +206,17 @@ function starpattern9(n){
     }
 }
 starpattern9(6);
+
+function countDigit(n){
+    if (n==1) {console.log(1, "cnt")
+        return
+    }
+    n = Math.abs(n);
+    let  cnt=0;
+    while (n>0){
+        n= Math.floor(n/10);
+        cnt++
+    }
+    console.log(cnt, "cnt")
+}
+countDigit()
