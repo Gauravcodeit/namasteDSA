@@ -220,3 +220,21 @@ function countDigit(n){
     console.log(cnt, "cnt")
 }
 countDigit()
+
+function isPalindrome(n){
+    if (n <0) return false
+    let ncopy = n;
+    let rev =0;
+    let rem;
+    while (n >0){
+        rem = n%10;
+        rev = 10* rev + rem;
+        n = Math.floor(n/10)
+    }
+
+    return ncopy === rev;
+}
+ console.log(isPalindrome(1221))
+ console.log(isPalindrome(-121))
+ console.log(isPalindrome(4884))
+ console.log(isPalindrome(1212))
