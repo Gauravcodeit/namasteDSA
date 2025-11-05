@@ -238,3 +238,21 @@ function isPalindrome(n){
  console.log(isPalindrome(-121))
  console.log(isPalindrome(4884))
  console.log(isPalindrome(1212))
+
+ function reverse(n){
+    let ncopy = n;
+    if(n == 0) return 0
+
+    n = Math.abs(n)
+    let rev= 0;
+    let rem;
+    while (n >0){
+        rem = n%10;
+        rev = rev* 10 + rem
+        n =Math.floor(n/10);
+    }
+    let limit = 2**31
+    if (rev > limit) return 0
+    return ncopy < 0 ? -rev : rev;
+ }
+ console.log(reverse(-22351))
