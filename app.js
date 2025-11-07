@@ -256,3 +256,20 @@ function isPalindrome(n){
     return ncopy < 0 ? -rev : rev;
  }
  console.log(reverse(-22351))
+
+ // Time complexity - It is used to measure efficeny of an algorithm in terms of
+ // speed , as the inputs grows  O(logn),O(n), O(nLogn), O(n2)
+
+ function removeDuplicate(num){
+    let arrywithoutDuplicate = [];
+    let temp = num[0];
+    arrywithoutDuplicate.push(temp)
+     for(let i =0; i < num.length; i++ ){
+        if(temp != num[i] ){
+            arrywithoutDuplicate.push(num[i])
+            temp = num[i];
+        }
+     }
+     console.log(arrywithoutDuplicate)
+ }
+ removeDuplicate([-1, -1,0,1,2,2,2,3,4])
