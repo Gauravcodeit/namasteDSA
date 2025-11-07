@@ -273,3 +273,18 @@ function isPalindrome(n){
      console.log(arrywithoutDuplicate)
  }
  removeDuplicate([-1, -1,0,1,2,2,2,3,4])
+
+ // how to do it duplicate problem in the same array by modifying it
+
+  function removeDuplicate2(num){
+    let pos = 0;
+     for(let i =0; i < num.length; i++ ){
+        if(num[pos] < num[i] ){
+             pos++;
+            num[pos] = num[i];
+
+        }
+     }
+     console.log(num, pos -1)
+ }
+ removeDuplicate2([-1, -1,0,1,2,2,2,3,4,4])
