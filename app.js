@@ -285,6 +285,19 @@ function isPalindrome(n){
 
         }
      }
-     console.log(num, pos -1)
+     console.log(num, pos + 1)
  }
  removeDuplicate2([-1, -1,0,1,2,2,2,3,4,4])
+
+ function removeValInArry(num, val){
+    let pos =0;
+     for(let i =0; i < num.length; i++ ){
+        if(num[i] != val){
+            num[pos] = num[i];
+            pos++;
+        }
+     }
+     console.log(num, pos)
+
+ }
+ removeValInArry([1,2,3,2,1,4], 1)
