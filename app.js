@@ -300,4 +300,17 @@ function isPalindrome(n){
      console.log(num, pos)
 
  }
- removeValInArry([1,2,3,2,1,4], 1)
+ removeValInArry([1,2,3,2,1,4], 1);
+
+ function reverseString(num){
+    let len = num.length;
+    let halfLen = Math.floor(len/2);
+    let temp;
+    for (let i =0; i < halfLen; i++){
+        temp = num[i];
+        num[i] = num[len - 1- i];
+        num[len - 1- i] = temp;
+    }
+    return num
+ }
+ console.log(reverseString(['a','b','c','d']))
