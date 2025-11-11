@@ -329,6 +329,24 @@ function isPalindrome(n){
             }
         }
     }
+    if(profit <=0) profit=0;
     console.log(buyPrice, sellPrice, profit )
  }
  maxProfit([1, 1, 1, 3,4])
+
+
+  function OptMaxProfit(price){
+
+    let min = price[0];
+    let maxprofit= 0;
+    for (let i =1; i < price.length; i++){
+        if(price[i] - min > maxprofit){
+           maxprofit = price[i] - min;
+        }
+        if(min > price[i]){
+            min = price[i];
+        }
+    }
+    console.log(maxprofit )
+ }
+ OptMaxProfit([1, 8, 1, 1, 3,4, -1, 10])
