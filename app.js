@@ -314,3 +314,21 @@ function isPalindrome(n){
     return num
  }
  console.log(reverseString(['a','b','c','d']))
+
+ function maxProfit(price){
+
+    let buyPrice = price[0];
+    let sellPrice = price[0];
+    let profit= sellPrice - buyPrice;
+    for (let i =0; i < price.length; i++){
+        for(let j= i + 1; j < price.length; j++){
+            if (price[j] - price[i] > profit){
+                profit = price[j] - price[i];
+                sellPrice =  price[j];
+                buyPrice = price[i];
+            }
+        }
+    }
+    console.log(buyPrice, sellPrice, profit )
+ }
+ maxProfit([1, 1, 1, 3,4])
