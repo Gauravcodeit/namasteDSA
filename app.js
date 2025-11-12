@@ -350,3 +350,37 @@ function isPalindrome(n){
     console.log(maxprofit )
  }
  OptMaxProfit([1, 8, 1, 1, 3,4, -1, 10])
+
+ function mergeSortedArry(num1, n, num2, m){
+   let num1copy = num1.slice(0,n);
+    let p1=0; p2=0;
+    for (let i=0; i < (m+n); i++){
+        if(((num1copy[p1] > num2[p2] && p2 < m ) || p1 >= n) ){
+            num1[i] = num2[p2];
+            p2++;
+        }
+        else if (p1 < n){
+            num1[i] = num1copy[p1];
+            p1++;
+        }
+    }
+    return (num1)
+ }
+console.log(mergeSortedArry([1,3,4,4,6], 5, [2,2,3,4], 4))
+
+ function mergeSortedArry2(num1, n, num2, m){
+   let num1copy = num1.slice(0,n);
+    let p1=0; p2=0;
+    for (let i=0; i < (m+n); i++){
+        if(((num1copy[p1] < num2[p2] && p1 < n ) || p2 == m) ){
+            num1[i] = num1copy[p1];
+            p1++;
+        }
+        else {
+            num1[i] = num2[p2];
+            p2++;
+        }
+    }
+    return (num1)
+ }
+console.log(mergeSortedArry2([1,3,4,5,6], 5, [2,2,3,4], 4))
