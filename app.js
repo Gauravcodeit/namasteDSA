@@ -384,3 +384,25 @@ console.log(mergeSortedArry([1,3,4,4,6], 5, [2,2,3,4], 4))
     return (num1)
  }
 console.log(mergeSortedArry2([1,3,4,5,6], 5, [2,2,3,4], 4))
+console.log(mergeSortedArry2([1,3,], 2, [2,2,3,4], 4))
+
+function optMergeSortArry(num1, n, num2, m){
+    let p1 = n - 1;
+    let p2 = m - 1;
+    for(let i= m+n-1; i >=0; i--){
+        if (p2 < 0) break;
+        if(num1[p1] < num2[p2] || p1 < 0 ){
+            num1[i] =num2[p2]
+            p2 --;
+        }
+        else{
+            num1[i] = num1[p1]
+            p1 --;
+        }
+    }
+    return num1
+
+}
+
+console.log(optMergeSortArry([1,3,4,5,6], 5, [2,2,3,4], 4))
+console.log(optMergeSortArry([1,3,], 2, [2,2,3,4], 4))
