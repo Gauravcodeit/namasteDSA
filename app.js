@@ -406,3 +406,28 @@ function optMergeSortArry(num1, n, num2, m){
 
 console.log(optMergeSortArry([1,3,4,5,6], 5, [2,2,3,4], 4))
 console.log(optMergeSortArry([1,3,], 2, [2,2,3,4], 4))
+
+// x=0;
+// 1 0 1 2 0 => x=1; i=0; shift non zero to x position then update x
+// 1 0 1 2 0 => x=1; i=1; do not shift and update
+// 1 1 1 2 0 => x=2; i=2; shift non zero to x position then update x
+// 1 1 2 2 0 => x=3; i=3; shift non zero to x position then update x
+// 1 1 2 2 0 => x=3; i=4; do not shift and update
+//  now add zero to all from pos x to array length => 1 1 2 0 0
+
+function moveZeros(num){
+    let x =0;
+    for (let i=0; i < num.length; i++){
+        if(num[i] != 0){
+            num[x] = num[i];
+            x++;
+        }
+    }
+    for (let i= x; i < num.length; i++){
+            num[i] = 0;
+    }
+    return num
+}
+
+console.log(moveZeros([1, 0, 1, 2, 0]))
+console.log(moveZeros([0, 0, 2, 2, 0]))
