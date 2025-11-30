@@ -432,7 +432,7 @@ function moveZeros(num){
 console.log(moveZeros([1, 0, 1, 2, 0]))
 console.log(moveZeros([0, 0, 2, 2, 0]))
 
-function consecutiveOnes(num){
+function consecutiveOnes(num, text){
     let maxCount =0;
     let count =0;
     for (let i=0; i < num.length; i++){
@@ -444,8 +444,21 @@ function consecutiveOnes(num){
             count = 0;
         }
     }
-    console.log(maxCount);
+    console.log(maxCount + " " +text);
 }
 
 consecutiveOnes([1,1,0,1,1,1], "ans1")
 consecutiveOnes([1,0,0,1,1,0,1,1,1,1], "ans2")
+consecutiveOnes([1,1,0,1,1,1,1], "ans3s")
+
+function missingNumber(num, n){
+    let expectedSum = (n*(n+1))/2;
+    let actualSum =0;
+    for (let i=0; i < num.length; i++){
+        actualSum += num[i];
+    }
+    return expectedSum - actualSum;
+}
+console.log(missingNumber([3,0,1], 3))
+console.log(missingNumber([0,1], 2))
+console.log(missingNumber([9,6,4,2,3,5,7,0,1], 9))
