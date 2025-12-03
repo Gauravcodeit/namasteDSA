@@ -451,7 +451,8 @@ consecutiveOnes([1,1,0,1,1,1], "ans1")
 consecutiveOnes([1,0,0,1,1,0,1,1,1,1], "ans2")
 consecutiveOnes([1,1,0,1,1,1,1], "ans3s")
 
-function missingNumber(num, n){
+function missingNumber(num){
+    let n = num.length;
     let expectedSum = (n*(n+1))/2;
     let actualSum =0;
     for (let i=0; i < num.length; i++){
@@ -459,6 +460,27 @@ function missingNumber(num, n){
     }
     return expectedSum - actualSum;
 }
-console.log(missingNumber([3,0,1], 3))
-console.log(missingNumber([0,1], 2))
-console.log(missingNumber([9,6,4,2,3,5,7,0,1], 9))
+console.log(missingNumber([3,0,1]))
+console.log(missingNumber([0,1]))
+console.log(missingNumber([9,6,4,2,3,5,7,0,1]))
+
+function singleNumber(num){
+    let hashMap = {};
+    for (let i=0; i < num.length; i++){
+        if(!hashMap[num[i]]){
+            hashMap[num[i]] = 1;
+        }
+        else{
+            hashMap[num[i]] ++;
+        }
+    }
+    for (let i=0; i < num.length; i++){
+        if(hashMap[num[i]] == 1){
+            return num[i];
+        }
+    }
+}
+
+
+console.log(singleNumber([4,1,2,1,2]))
+console.log(singleNumber([2,2,1]))
