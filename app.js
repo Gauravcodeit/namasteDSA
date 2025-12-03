@@ -480,7 +480,38 @@ function singleNumber(num){
         }
     }
 }
+function singleNumber2(num){
+    let hashMap = {};
+    for (let i=0; i < num.length; i++){
+        if(!hashMap[num[i]]){
+            hashMap[num[i]] = 1;
+        }
+        else{
+            hashMap[num[i]] ++;
+        }
+    }
+    for (key in hashMap ){
+        if(hashMap[key] == 1){
+            return key
+        }
+    }
+}
+function singleNumber3(num){
+    let result = 0;
+    for (let i=0; i < num.length; i++){
+        result = result ^ num[i]
+    }
+    return result;
+
+}
 
 
 console.log(singleNumber([4,1,2,1,2]))
 console.log(singleNumber([2,2,1]))
+
+console.log(singleNumber2([4,1,2,1,2]))
+console.log(singleNumber2([2,2,1]))
+
+console.log(singleNumber3([4,1,2,1,2]))
+console.log(singleNumber3([2,2,1]))
+console.log(singleNumber3([8,8, 9, 6, 1,2,2,1])) // it will fail in this case
