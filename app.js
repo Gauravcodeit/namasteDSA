@@ -515,3 +515,22 @@ console.log(singleNumber2([2,2,1]))
 console.log(singleNumber3([4,1,2,1,2]))
 console.log(singleNumber3([2,2,1]))
 console.log(singleNumber3([8,8, 9, 6, 1,2,2,1])) // it will fail in this case
+
+function toprintNTo1(n) {
+    if (n == 0) return
+    console.log(n);
+    n--;
+    toprintNTo1(n)
+
+}
+
+toprintNTo1(15)
+
+function toprint1ToN(n, inital) {
+    if (inital > n) return
+    console.log(inital);
+    inital++;
+    toprintNTo1(n,inital)
+
+}
+toprint1ToN(10, 1)
