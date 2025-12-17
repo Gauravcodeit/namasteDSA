@@ -533,4 +533,12 @@ function toprint1ToN(n, inital) {
     toprintNTo1(n,inital)
 
 }
-toprint1ToN(10, 1)
+toprint1ToN(10, 1);
+
+function sumOfFirstNNumber(n, sum){
+    if(n < 0) {return sum;}
+    sum = sum + n;
+    n--;
+    return sumOfFirstNNumber(n, sum)
+}
+console.log(sumOfFirstNNumber(3,0))
