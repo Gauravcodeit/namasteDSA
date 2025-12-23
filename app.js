@@ -548,3 +548,25 @@ function sum (n){
     return (n + sum(n-1))
 }
 console.log(sum(5));
+
+function sumOfArry(arr){
+    if (arr.length == 0) return 0
+    return (arr.pop() + sumOfArry(arr))
+}
+console.log(sumOfArry([1,3,4,3, 5]))
+
+const arr1 = [4,3,4,3, 5];
+
+function sumOfArry2(n){
+    if (n == 0) return arr1[n]
+    return (arr1[n] + sumOfArry2(n - 1))
+}
+console.log(sumOfArry2(arr1.length - 1 ))
+
+function sumOfOddInArry(n){
+    if(n == 0) {
+        return (arr1[n]%2 !=0 ? arr1[n] : 0)
+    }
+    return (arr1[n]%2 !=0 ? arr1[n] + sumOfOddInArry(n-1) : sumOfOddInArry(n-1))
+}
+console.log(sumOfOddInArry(arr1.length - 1 ))
