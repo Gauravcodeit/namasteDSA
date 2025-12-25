@@ -569,4 +569,18 @@ function sumOfOddInArry(n){
     }
     return (arr1[n]%2 !=0 ? arr1[n] + sumOfOddInArry(n-1) : sumOfOddInArry(n-1))
 }
-console.log(sumOfOddInArry(arr1.length - 1 ))
+console.log(sumOfOddInArry(arr1.length - 1 ));
+
+function factorial(n){
+   if (n  == 1) return 1
+   return n * factorial(n-1);
+}
+console.log(factorial(5));
+
+function powerOfTwo(n){
+    if(n== 1) return true;
+    return n % 2 == 0 ? powerOfTwo(n/2) : false;
+}
+console.log(powerOfTwo(4))
+console.log(powerOfTwo(1))
+console.log(powerOfTwo(5))
