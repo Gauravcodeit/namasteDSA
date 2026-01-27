@@ -579,8 +579,20 @@ console.log(factorial(5));
 
 function powerOfTwo(n){
     if(n== 1) return true;
+    else if(n < 1) return false;
     return n % 2 == 0 ? powerOfTwo(n/2) : false;
 }
 console.log(powerOfTwo(4))
 console.log(powerOfTwo(1))
 console.log(powerOfTwo(5))
+
+function fib(n){
+    if (n == 0) return 0;
+    if(n == 1) return 1;
+    return  (fib(n-2) + fib(n-1))
+
+}
+
+console.log(fib(4)) // 1,1,2,3, 5,8
+console.log(fib(5))
+console.log(fib(6))
