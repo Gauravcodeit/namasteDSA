@@ -587,8 +587,8 @@ console.log(powerOfTwo(1))
 console.log(powerOfTwo(5))
 
 function fib(n){
-    if (n == 0) return 0;
-    if(n == 1) return 1;
+    if (n <= 0) return 0;
+    if(n == 1) return 1; // if(n<=1) return n
     return  (fib(n-2) + fib(n-1))
 
 }
@@ -596,3 +596,14 @@ function fib(n){
 console.log(fib(4)) // 1,1,2,3, 5,8
 console.log(fib(5))
 console.log(fib(6))
+
+// there two rabbits and every month it is muliple by  2
+// n is the month
+function countRabbit(n){
+    if(n==1) return 2
+    return 2*countRabbit(n-1);
+}
+
+console.log(countRabbit(1))
+console.log(countRabbit(3))
+console.log(countRabbit(4))
