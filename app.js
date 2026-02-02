@@ -607,3 +607,16 @@ function countRabbit(n){
 console.log(countRabbit(1))
 console.log(countRabbit(3))
 console.log(countRabbit(4))
+
+function linearSearch(arr, target){
+    for(let i=0; i< arr.length; i++) {
+        if (arr[i] == target){
+            return i
+        }
+    }
+    return -1
+}
+
+console.log(linearSearch([1,2,3],1))
+console.log(linearSearch([1,2,3],3))
+console.log(linearSearch([1,2,3],4))
