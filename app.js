@@ -643,3 +643,24 @@ function binarySearch(arr, target) {
 console.log(binarySearch([1,2,4],1))
 console.log(binarySearch([1,2,4],3))
 console.log(binarySearch([1,2,4],4))
+
+
+function bubbleSort(arr) {
+    let l = arr.length;
+    let temp;
+    let isSwapped = false;
+    for (let i =0; i < l-1; i++) {
+        for(let j=0; j < l-1-i; j++ ){
+            if (arr[j] > arr[j+1] ){
+                temp =  arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                isSwapped = true;
+            }
+        }
+        if (isSwapped == false) break
+    }
+    return (arr);
+}
+
+console.log(bubbleSort([10,2, 4, 3]))
