@@ -664,3 +664,26 @@ function bubbleSort(arr) {
 }
 
 console.log(bubbleSort([10,2, 4, 3]))
+
+function selectionSort(arr) {
+    let len = arr.length;
+    let temp;
+    let min;
+    for (let i=0; i < len -1; i++) {
+        min = i;
+        for (let j=i+1; j<len; j++) {
+            if(arr[min] > arr[j]){
+                min = j;
+            }
+        }
+        if (min != i) {
+            temp = arr[min]
+            arr[min] = arr[i]
+            arr[i] = temp;
+        }
+    }
+
+    return arr
+}
+
+console.log(selectionSort([10,4,3,4,2,6]))
