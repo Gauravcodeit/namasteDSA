@@ -686,4 +686,24 @@ function selectionSort(arr) {
     return arr
 }
 
-console.log(selectionSort([10,4,3,4,2,6]))
+console.log(selectionSort([10,4,3,4,2,6]));
+
+function insertionSort(arr) {
+    let len = arr.length;
+    let curr, prev
+    for (i = 1; i < len ; i++ ){
+        curr = arr[i];
+        prev = i - 1;
+        while ( arr[prev] > curr && prev >=0){
+            arr[prev + 1] = arr[prev];
+            prev--;
+        }
+        arr[prev + 1] = curr
+
+    }
+    return arr;
+}
+
+console.log(insertionSort([10,4,3,4,2,6]));
+console.log(insertionSort([2,4,3,1,10]), "insertion");
+// [2,4,3,1,10] -> [2,4,3,1,10] -> [2, 3, 4,1,10] -> [1,2,3,4,10] ->  [2,4,3,1,10]
